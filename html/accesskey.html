@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acess Key</title>
+  </head>
+  <body>
+    <h1>Acess Key</h1>
+    <div>
+      <h2>Descrição</h2>
+      <p>
+        Acess Key (Em codigo accesskey) é o atributo que permite utilizar uma
+        tecla de atalho para acessar diretamente um determinado local da pagina
+        HTML. Por exemplo você apertar a tecla Alt + H com uma Acess Key
+        definida no botão "Home", irá ter o mesmo efeito que clicar no botão.
+      </p>
+      <p>
+        * É altamente recomendado não utilizar Acess Key pois o mesmo depende do
+        idioma (Certas letras não existem em certos idiomas) e a possibilidade
+        de conflito com configurações padrões do navegador (Por exemplo o F1 que
+        é o Ajuda).
+        <br />
+        * Se realmente necessário o uso, a recomendação é utilizar uma tecla que
+        existe no tipo de teclado "Qwerty" (ç não existe lá por exemplo)
+      </p>
+    </div>
+
+    <div>
+      <h2>Exemplo</h2>
+      <h3>Codigo</h3>
+      <code>
+        &lt;a href="https://www.google.com.br/" accesskey="h"&gt;Pressione o
+        atalho + H&lt;/a&gt;
+        <br />
+        &lt;button accesskey="s"&gt;Pressione o atalho + S&lt;/button&gt;
+      </code>
+      <h3>Implementado</h3>
+      <p>
+        <strong>
+          Navegadores "Edge", "IE", "Chrome", "Safari" ou "Opera 15+":
+        </strong>
+        Pressione ALT + h
+        <br />
+        <strong> Navegador "Opera" anterior a versão 15: </strong> Pressione
+        SHIFT + ESC + h
+        <br />
+        <strong>Navegador "Firefox": </strong>
+        Pressione ALT + SHIFT + h
+      </p>
+      <a href="https://www.google.com.br/" accesskey="h"
+        >Pressione o atalho + H
+      </a>
+      <br />
+      <button accesskey="s">Pressione o atalho + S</button>
+    </div>
+
+    <div>
+      <h3>Referências</h3>
+      <p>
+        W3 schools -
+        <a href="https://www.w3schools.com/tags/att_global_accesskey.asp">
+          HTML accesskey Attribute
+        </a>
+      </p>
+    </div>
+  </body>
+</html>
