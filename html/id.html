@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ID</title>
+  </head>
+  <body>
+    <h1>ID</h1>
+    <div>
+      <h2>Descrição</h2>
+      <p>
+        O atributo ID (Em codigo id), serve para tornar um elemento unico no seu
+        HTML seja para utilização no CSS ou JavaScript
+      </p>
+      <p>
+        * Embora o HTML aceite vários elementos com o mesmo ID, é recomendado
+        sempre deixar o ID unico
+      </p>
+    </div>
+
+    <div>
+      <h2>Exemplo</h2>
+      <h3>Codigo</h3>
+      <code>
+        &lt;style&gt;
+        <br />
+         .caixa {
+        <br />
+          width: 100px;
+        <br />
+          height: 100px;
+        <br />
+          border: solid 1px red;
+        <br />
+         }
+        <br />
+         #c1 {
+        <br />
+          background-color: greenyellow;
+        <br />
+         }
+        <br />
+         #c2 {
+        <br />
+          background-color: lightcyan;
+        <br />
+         }
+        <br />
+        &lt;/style&gt;
+        <br />
+        <br />
+        &lt;div id="c1" class="caixa"&gt;&lt;/div&gt;
+        <br />
+        &lt;br /&gt;
+        <br />
+        &lt;div id="c2" class="caixa"&gt;&lt;/div&gt;
+      </code>
+      <h3>Implementado</h3>
+      <style>
+        .caixa {
+          width: 100px;
+          height: 100px;
+          border: solid 1px red;
+        }
+        #c1 {
+          background-color: greenyellow;
+        }
+        #c2 {
+          background-color: lightcyan;
+        }
+      </style>
+
+      <p>
+        Observe que uma parte da formatação veio da Class e outra do ID, usando
+        justamente o ID para tornar a cor do elemento unico
+      </p>
+      <div id="c1" class="caixa"></div>
+      <br />
+      <div id="c2" class="caixa"></div>
+    </div>
+
+    <div>
+      <h3>Referências</h3>
+      <p>
+        Mozilla Developer -
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id"
+          target="_blank"
+        >
+          id
+        </a>
+      </p>
+    </div>
+  </body>
+</html>

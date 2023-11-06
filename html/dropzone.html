@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropzone</title>
+  </head>
+  <body>
+    <h1>Dropzone</h1>
+    <div>
+      <h2>Descrição</h2>
+      <p>
+        O atributo Dropzone (Em codigo dropzone), serve para indicar um dado
+        arrastado (Atributo <a href="./draggable.html">Draggable</a>) será
+        copiado, movido ou vinculado quando solto em um elemento
+      </p>
+      <p>
+        * Este atributo não foi totalmente implementado no HTML 5, portanto ele
+        só irá funcionar corretamente em conjunto ao JavaScript
+      </p>
+    </div>
+
+    <div>
+      <h2>Exemplo</h2>
+      <h3>Codigo</h3>
+      <code>
+        &lt;style&gt;
+        <br />
+         .caixa {
+        <br />
+          width: 100px;
+        <br />
+          height: 100px;
+        <br />
+          background-color: lightgray;
+        <br />
+         }
+        <br />
+         .drop {
+        <br />
+          width: 100px;
+        <br />
+          height: 200px;
+        <br />
+          border: solid 1px red;
+        <br />
+         }
+        <br />
+        &lt;/style&gt;
+        <br />
+        <br />
+        &lt;div id="c1" class="caixa" draggable="true"&gt; &lt;/div&gt;
+        <br />
+        &lt;br /&gt;
+        <br />
+        &lt;div id="c2" class="caixa" draggable="true"&gt; &lt;/div&gt;
+        <br />
+        &lt;div class="drop" dropzone="copy"&gt;&lt;/div&gt;
+        <br />
+        <br />
+        &lt;script&gt;
+        <br />
+         const caixas = document.querySelectorAll(".caixa")
+        <br />
+         const dropZone = document.querySelector("[dropzone]")
+        <br />
+         caixas.forEach((caixaEl) =&gt; {
+        <br />
+          caixaEl.addEventListener("dragstart", (e) =&gt; {
+        <br />
+           e.dataTransfer.setData("Text", e.target.id)
+        <br />
+           console.log("Estou movento a Div com ID: " + e.target.id)
+        <br />
+          })
+        <br />
+         })
+        <br />
+         &lt;!--Remove o comportamento Padrão do navegador para a ação do
+        Drop--&gt;
+        <br />
+         dropZone.addEventListener("dragover", (e) =&gt; {
+        <br />
+          e.preventDefault()
+        <br />
+         })
+        <br />
+         dropZone.addEventListener("drop", (e) =&gt; {
+        <br />
+          const id = e.dataTransfer.getData("Text")
+        <br />
+          const element = document.getElementById(id)
+        <br />
+          e.target.appendChild(element)
+        <br />
+         })
+        <br />
+        &lt;/script&gt;
+      </code>
+      <h3>Implementado</h3>
+      <style>
+        .caixa {
+          width: 100px;
+          height: 100px;
+          background-color: lightgray;
+        }
+        .drop {
+          width: 100px;
+          height: 200px;
+          border: solid 1px red;
+        }
+      </style>
+
+      <p>Monitore pelo Console para melhor entendimento do JavaScript</p>
+      <div id="c1" class="caixa" draggable="true"></div>
+      <br />
+      <div id="c2" class="caixa" draggable="true"></div>
+      <br />
+      <div class="drop" dropzone="copy"></div>
+
+      <script>
+        const caixas = document.querySelectorAll(".caixa")
+        const dropZone = document.querySelector("[dropzone]")
+
+        caixas.forEach((caixaEl) => {
+          caixaEl.addEventListener("dragstart", (e) => {
+            e.dataTransfer.setData("Text", e.target.id)
+            console.log("Estou movento a Div com ID: " + e.target.id)
+          })
+        })
+
+        <!--Remove o comportamento Padrão do navegador para a ação do Drop-->
+        dropZone.addEventListener("dragover", (e) => {
+          e.preventDefault()
+        })
+
+        dropZone.addEventListener("drop", (e) => {
+          const id = e.dataTransfer.getData("Text")
+          const element = document.getElementById(id)
+
+          e.target.appendChild(element)
+        })
+      </script>
+    </div>
+
+    <div>
+      <h3>Referências</h3>
+      <p>
+        W3 schools -
+        <a
+          href="https://www.w3schools.com/tags/att_dropzone.asp"
+          target="_blank"
+        >
+          HTML dropzone Attribute
+        </a>
+      </p>
+      <p>
+        hcode -
+        <a href="https://www.youtube.com/watch?v=K2ER95odliw" target="_blank">
+          Atributo dropzone do HTML 5
+        </a>
+      </p>
+    </div>
+  </body>
+</html>

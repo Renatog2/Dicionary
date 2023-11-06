@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data-*</title>
+  </head>
+  <body>
+    <h1>Data-*</h1>
+    <div>
+      <h2>Descrição</h2>
+      <p>
+        O atributo Data-* (Em codigo data-*), serve para guardar algum dado que
+        possa ser utilizado posteriormente mas não fique visível ao usuário
+      </p>
+      <p>
+        * Ao declarar um Data-*, não se pode utilizar letras maiusculas sendo
+        necessário fazer a separação de palavras utilizando o -
+        <br />
+        * A principal ideia do Data-* é trazer informações que possam ser
+        utilizadas no Script da pagina
+        <br />
+        * É possível utilizar mais de um Data-* por elemento
+      </p>
+    </div>
+
+    <div>
+      <h2>Exemplo</h2>
+      <h3>Codigo</h3>
+      <code>
+        &lt;script&gt;
+        <br />
+         function showDetails(animal) {
+        <br />
+          let animalType = animal.getAttribute("data-animal-type")
+        <br />
+          alert(animal.innerHTML + " é um " + animalType);
+        <br />
+         }
+        <br />
+        &lt;/script&gt;
+        <br />
+        <br />
+        &lt;ul&gt;
+        <br />
+         &lt;li onclick="showDetails(this)"
+        data-animal-type="Humano"&gt;Renato&lt;/li&gt;
+        <br />
+         &lt;li onclick="showDetails(this)"
+        data-animal-type="Humano"&gt;Gustavo&lt;/li&gt;
+        <br />
+         &lt;li onclick="showDetails(this)"
+        data-animal-type="Cão"&gt;Rex&lt;/li&gt;
+        <br />
+        &lt;/ul&gt;
+      </code>
+      <h3>Implementado</h3>
+      <script>
+        function showDetails(animal) {
+          let animalType = animal.getAttribute("data-animal-type")
+          alert(animal.innerHTML + " é um " + animalType)
+        }
+      </script>
+
+      <p>Clique sobre um nome para ver o funcionamento:</p>
+      <ul>
+        <li onclick="showDetails(this)" data-animal-type="Humano">Renato</li>
+        <li onclick="showDetails(this)" data-animal-type="Humano">Gustavo</li>
+        <li onclick="showDetails(this)" data-animal-type="Cão">Rex</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Referências</h3>
+      <p>
+        W3 schools -
+        <a href="https://www.w3schools.com/tags/att_data-.asp" target="_blank">
+          HTML data-* Attribute
+        </a>
+      </p>
+    </div>
+  </body>
+</html>

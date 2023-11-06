@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Draggable</title>
+  </head>
+  <body>
+    <h1>Draggable</h1>
+    <div>
+      <h2>Descrição</h2>
+      <p>
+        O atributo Draggable (Em codigo draggable), serve para definir se um
+        elemento pode ser arrastado (Movido) na pagina.
+      </p>
+      <p>
+        * Aplicação pratica é a exemplo no Google Drive, quando adicionamos um
+        arquivo e podemos arrastalo (draggable) dentro do proprio Drive para
+        outro local
+      </p>
+    </div>
+
+    <div>
+      <h2>Exemplo</h2>
+      <h3>Codigo</h3>
+      <code>
+        &lt;style&gt;
+        <br />
+         #quadrado {
+        <br />
+          width: 100px;
+        <br />
+          height: 100px;
+        <br />
+          background-color: grey;
+        <br />
+         }
+        <br />
+        &lt;/style&gt;
+        <br />
+        <br />
+        &lt;div id="quadrado" draggable="false"&gt;&lt;/div&gt;
+        <br />
+        &lt;div id="quadrado" draggable="true"&gt;&lt;/div&gt;
+      </code>
+      <h3>Implementado</h3>
+      <style>
+        #quadrado {
+          width: 100px;
+          height: 100px;
+          background-color: grey;
+        }
+      </style>
+
+      <p>Você não consegue arrastar:</p>
+      <div id="quadrado" draggable="false"></div>
+      <p>Você consegue arrastar:</p>
+      <div id="quadrado" draggable="true"></div>
+    </div>
+
+    <div>
+      <h3>Referências</h3>
+      <p>
+        hcode -
+        <a href="https://www.youtube.com/watch?v=TLakhSDYkiw" target="_blank">
+          Atributo draggable do HTML 5
+        </a>
+      </p>
+    </div>
+  </body>
+</html>
