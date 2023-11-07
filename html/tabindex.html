@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab Index</title>
+  </head>
+  <body>
+    <h1>Tab Index</h1>
+    <div>
+      <h2>Descrição</h2>
+      <p>
+        O atributo Tab Index (Em codigo tabindex), serve para definir a ordem em
+        que o botão tab vai avançar na pagina conforme pressionado
+      </p>
+      <p>
+        * Normalmente a utilização desse atributo é para pular um campo menos
+        utilizado
+      </p>
+    </div>
+
+    <div>
+      <h2>Exemplo</h2>
+      <h3>Codigo</h3>
+      <code>
+        &lt;form&gt;
+        <br />
+         &lt;input type="text" placeholder="E-mail" tabindex="1" /&gt;
+        <br />
+         &lt;input type="password" placeholder="Senha" tabindex="2" /&gt;
+        <br />
+         &lt;button type="reset" tabindex="4"&gt;Limpar&lt;/button&gt;
+        <br />
+         &lt;button type="submit" tabindex="3"&gt;Enviar&lt;/button&gt;
+        <br />
+        &lt;/form&gt;
+      </code>
+      <h3>Implementado</h3>
+      <p>Aperte TAB a partir do campo E-MAIL para observar a ordem</p>
+      <form>
+        <input type="text" placeholder="E-mail" tabindex="1" />
+        <input type="password" placeholder="Senha" tabindex="2" />
+        <button type="reset" tabindex="4">Limpar</button>
+        <button type="submit" tabindex="3">Enviar</button>
+      </form>
+    </div>
+
+    <div>
+      <h3>Referências</h3>
+      <p>
+        W3 schools -
+        <a
+          href="https://www.w3schools.com/tags/att_global_tabindex.asp"
+          target="_blank"
+        >
+          HTML tabindex Attribute
+        </a>
+      </p>
+    </div>
+  </body>
+</html>
